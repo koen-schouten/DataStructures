@@ -71,6 +71,15 @@ void SinglyLinkedList<T>::addLast(T element) {
 	size++;
 }
 
+template<typename T>
+SinglyLinkedList<T>::~SinglyLinkedList() {
+	while (size > 0) {
+		removeFirst();
+	}
+	delete head;
+	delete tail;
+}
+
 
 #endif
 

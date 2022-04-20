@@ -14,11 +14,13 @@ class SinglyLinkedList {
 		void addLast(T elememt);
 		T removeFirst();
 		int getSize();
+		~SinglyLinkedList();
 
 	private:
 		SinglyLinkedListNode<T> *head = nullptr;
 		SinglyLinkedListNode<T> *tail = nullptr;
 		int size = 0;
+
 
 };
 
