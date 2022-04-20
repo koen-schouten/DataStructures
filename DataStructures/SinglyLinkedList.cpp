@@ -7,15 +7,9 @@
 #include <memory>
 
 template<typename T>
-SinglyLinkedList<T>::SinglyLinkedList() {
-
-}
-
-template<typename T>
 int SinglyLinkedList<T>::getSize() {
 	return size;
 }
-
 
 template<typename T>
 bool SinglyLinkedList<T>::isEmpty() {
@@ -29,19 +23,15 @@ T SinglyLinkedList<T>::removeFirst() {
 	}
 
 	SinglyLinkedListNode<T> *elementToRemove = head;
-
 	T answer = head->getElement();
 	head = head->getNext();
-
 	delete elementToRemove;
-
 	size--;
 	if (size == 0) {
 		tail = 0;
 	}
 	return answer;
 }
-
 
 template<typename T>
 T SinglyLinkedList<T>::first() {

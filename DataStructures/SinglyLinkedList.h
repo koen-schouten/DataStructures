@@ -7,7 +7,6 @@
 template<typename T>
 class SinglyLinkedList {
 	public:
-		SinglyLinkedList();
 		bool isEmpty();
 		T first();
 		T last();
