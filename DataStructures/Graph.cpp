@@ -1,4 +1,8 @@
+
 #include "Graph.h"
+#include "Edge.h";
+#include "Vertex.h"
+#include <vector>;
 
 template<typename VertexItem, typename EdgeItem>
 inline Graph<VertexItem, EdgeItem>::Graph()
@@ -41,7 +45,7 @@ inline Vertex Graph<VertexItem, EdgeItem>::opposite(Vertex v, Edge e)
 }
 
 template<typename VertexItem, typename EdgeItem>
-inline int Graph<VertexItem, EdgeItem>::outDegree(Vertex v)
+int Graph<VertexItem, EdgeItem>::outDegree(Vertex v)
 {
 	return 0;
 }

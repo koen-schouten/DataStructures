@@ -4,13 +4,13 @@
 
 #include "Node.h"
 
-template<typename T>
-class SinglyLinkedListNode : public Node<T> {
+template<typename VertexItem>
+class SinglyLinkedListNode : public Node<VertexItem> {
 public:
-	SinglyLinkedListNode<T> *next = nullptr;
-	SinglyLinkedListNode(T element, SinglyLinkedListNode<T> *next);
-	void setNext(SinglyLinkedListNode<T> *next);
-	SinglyLinkedListNode<T> *getNext();
+	SinglyLinkedListNode<VertexItem> *next = nullptr;
+	SinglyLinkedListNode(VertexItem element, SinglyLinkedListNode<VertexItem> *next);
+	void setNext(SinglyLinkedListNode<VertexItem> *next);
+	SinglyLinkedListNode<VertexItem> *getNext();
 };
 
 #include "SinglyLinkedListNode.cpp"

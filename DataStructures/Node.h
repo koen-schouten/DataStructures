@@ -2,13 +2,13 @@
 #ifndef NODE_H
 #define NODE_H
 
-template<typename T>
+template<typename VertexItem>
 class Node {
 public:
-	Node<T>(T element);
-	T getElement();
+	Node<VertexItem>(VertexItem element);
+	VertexItem getElement();
 private:
-	T element;
+	VertexItem element;
 };
 
 #include "node.cpp"

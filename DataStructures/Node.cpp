@@ -3,13 +3,13 @@
 
 #include "Node.h"
 
-template<typename T>
-Node<T>::Node(T element) {
+template<typename VertexItem>
+Node<VertexItem>::Node(VertexItem element) {
 	this->element = element;
 }
 
-template<typename T>
-T Node<T>::getElement() {
+template<typename VertexItem>
+VertexItem Node<VertexItem>::getElement() {
 	return this->element;
 }
 
