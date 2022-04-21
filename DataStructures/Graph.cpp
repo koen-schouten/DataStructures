@@ -1,4 +1,8 @@
+
 #include "Graph.h"
+#include "Edge.h";
+#include "Vertex.h"
+#include <vector>;
 
 template<typename VertexItem, typename EdgeItem>
 inline Graph<VertexItem, EdgeItem>::Graph()
