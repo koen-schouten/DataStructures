@@ -1,13 +1,13 @@
 #pragma once
 #include "Vertex.h"
 
-template <typename EdgeItem>
+template <typename EdgeItem, typename VertexItem>
 class Edge
 {
 public:
 
-	Vertex from;
-	Vertex to;
+	Vertex<VertexItem> from;
+	Vertex<VertexItem> to;
 	EdgeItem item;
 
 	Edge();

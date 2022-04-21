@@ -1,3 +1,6 @@
+#ifndef VERTEX
+#define VERTEX
+
 #include "Vertex.h"
 
 template<typename VertexItem>
@@ -9,3 +12,5 @@ template<typename VertexItem>
 inline Vertex<VertexItem>::~Vertex()
 {
 }
+
+#endif 

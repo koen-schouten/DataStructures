@@ -1,6 +1,6 @@
 #pragma once
-#ifndef GRAPH
-#define GRAPH
+#ifndef GRAPH_H
+#define GRAPH_H
 
 #include "Vertex.h"
 #include "Edge.h"
@@ -15,25 +15,25 @@ public:
 	~Graph();
 
 	int numVertices();
-	std::vector<Vertex>::iterator vertices();
+	std::vector<Vertex<VertexItem>> vertices();
 	int numEdges();
-	std::vector<Vertex>::iterator edges();
+	std::vector<Vertex<VertexItem>> edges();
 
-	Edge getEdge(Vertex u, Vertex v);
-	std::vector<Vertex> endVertices(Edge e);
-	Vertex opposite(Vertex v, Edge e);
+	Edge<EdgeItem, VertexItem> getEdge(Vertex<VertexItem> u, Vertex<VertexItem> v);
+	std::vector<Vertex<VertexItem>> endVertices(Edge<EdgeItem, VertexItem> e);
+	Vertex<VertexItem> opposite(Vertex<VertexItem> v, Edge<EdgeItem, VertexItem> e);
 
-	int outDegree(Vertex v);
-	int inDegree(Vertex v);
+	int outDegree(Vertex<VertexItem> v);
+	int inDegree(Vertex<VertexItem> v);
 
-	std::vector<Vertex>::iterator outgoingEdges(Vertex v);
-	std::vector<Vertex>::iterator incomingEdges(Vertex v);
+	std::vector<Vertex<VertexItem>> outgoingEdges(Vertex<VertexItem> v);
+	std::vector<Vertex<VertexItem>> incomingEdges(Vertex<VertexItem> v);
 
-	Vertex insertVertex(VertexItem item);
-	Edge insertEdge(Vertex u, Vertex v, EdgeItem item);
+	Vertex<VertexItem> insertVertex(VertexItem item);
+	Edge<EdgeItem, VertexItem> insertEdge(Vertex<VertexItem> u, Vertex<VertexItem> v, EdgeItem item);
 
-	void removeVertex(Vertex v);
-	void removeEdge(Edge e);
+	void removeVertex(Vertex<VertexItem> v);
+	void removeEdge(Edge<EdgeItem, VertexItem> e);
 
 private:
 
