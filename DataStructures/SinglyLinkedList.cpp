@@ -6,24 +6,24 @@
 #include "SinglyLinkedList.h"
 #include <memory>
 
-template<typename VertexItem>
-int SinglyLinkedList<VertexItem>::getSize() {
+template<typename T>
+int SinglyLinkedList<T>::getSize() {
 	return size;
 }
 
-template<typename VertexItem>
-bool SinglyLinkedList<VertexItem>::isEmpty() {
+template<typename T>
+bool SinglyLinkedList<T>::isEmpty() {
 	return (size == 0);
 }
 
-template<typename VertexItem>
-VertexItem SinglyLinkedList<VertexItem>::removeFirst() {
+template<typename T>
+T SinglyLinkedList<T>::removeFirst() {
 	if (isEmpty()) {
 		return 0;
 	}
 
-	SinglyLinkedListNode<VertexItem> *elementToRemove = head;
-	VertexItem answer = head->getElement();
+	SinglyLinkedListNode<T> *elementToRemove = head;
+	T answer = head->getElement();
 	head = head->getNext();
 	delete elementToRemove;
 	size--;
@@ -33,34 +33,34 @@ VertexItem SinglyLinkedList<VertexItem>::removeFirst() {
 	return answer;
 }
 
-template<typename VertexItem>
-VertexItem SinglyLinkedList<VertexItem>::first() {
+template<typename T>
+T SinglyLinkedList<T>::first() {
 	if (isEmpty()) {
 		return 0;
 	}
 	return head->getElement();
 }
 
-template<typename VertexItem>
-VertexItem SinglyLinkedList<VertexItem>::last() {
+template<typename T>
+T SinglyLinkedList<T>::last() {
 	if (isEmpty()) {
 		return 0;
 	}
 	return tail->getElement();
 }
 
-template<typename VertexItem>
-void SinglyLinkedList<VertexItem>::addFirst(VertexItem elememt) {
-	head = new SinglyLinkedListNode<VertexItem>(elememt, head);
+template<typename T>
+void SinglyLinkedList<T>::addFirst(T elememt) {
+	head = new SinglyLinkedListNode<T>(elememt, head);
 	if (size == 0) {
 		tail = head;
 	}
 	size++;
 }
 
-template<typename VertexItem>
-void SinglyLinkedList<VertexItem>::addLast(VertexItem element) {
-	SinglyLinkedListNode<VertexItem> newest = new SinglyLinkedListNode<VertexItem>(element, 0);
+template<typename T>
+void SinglyLinkedList<T>::addLast(T element) {
+	SinglyLinkedListNode<T> newest = new SinglyLinkedListNode<T>(element, 0);
 	if (isEmpty()) {
 		head = newest;
 	}
@@ -71,8 +71,8 @@ void SinglyLinkedList<VertexItem>::addLast(VertexItem element) {
 	size++;
 }
 
-template<typename VertexItem>
-SinglyLinkedList<VertexItem>::~SinglyLinkedList() {
+template<typename T>
+SinglyLinkedList<T>::~SinglyLinkedList() {
 	while (size > 0) {
 		removeFirst();
 	}

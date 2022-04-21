@@ -4,21 +4,21 @@
 
 #include "SinglyLinkedListNode.h"
 
-template<typename VertexItem>
+template<typename T>
 class SinglyLinkedList {
 	public:
 		bool isEmpty();
-		VertexItem first();
-		VertexItem last();
-		void addFirst(VertexItem elememt);
-		void addLast(VertexItem elememt);
-		VertexItem removeFirst();
+		T first();
+		T last();
+		void addFirst(T elememt);
+		void addLast(T elememt);
+		T removeFirst();
 		int getSize();
 		~SinglyLinkedList();
 
 	private:
-		SinglyLinkedListNode<VertexItem> *head = nullptr;
-		SinglyLinkedListNode<VertexItem> *tail = nullptr;
+		SinglyLinkedListNode<T> *head = nullptr;
+		SinglyLinkedListNode<T> *tail = nullptr;
 		int size = 0;
 
 
